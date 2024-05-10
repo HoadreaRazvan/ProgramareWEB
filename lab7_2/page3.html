@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <nav id="menuContent">
+        <!-- the menu will be loaded dinamic  -->
+      </nav>
+
+      <!-- content -->
+      <section>
+        <h1>Page3</h1>
+        <!-- the menu will be loaded dinamic  -->
+        <!-- 
+                O SA MAI AVETI UN FORMULAR
+                SI PUTETI INTRODUCE VOI DATE IN LOCAL STORAGE
+
+
+             -->
+
+        <form id="myForm">
+          <input type="number" name="id" />
+          <input type="text" name="title" />
+          <input type="text" name="body" />
+          <input type="submit" value="Add Post" />
+        </form>
+      </section>
+
+      <!-- type="module" -->
+      <script src="./scripts/last.js" type="module"></script>
+
+      <script>
+        var form = document.getElementById("myForm");
+        form.addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          var formData = new FormData(form);
+          var formDataObject = {};
+          formData.forEach(function (value, key) {
+            formDataObject[key] = value;
+          });
+
+          formDataObject["id"] = Number(formDataObject["id"]);
+          if (!Number.isInteger(formDataObject["id"])) {
+            alert("not number");
+          }
+          if (
+            formDataObject["title"] == "" ||
+            formDataObject["title"] == null
+          ) {
+            alert("empty title");
+          }
+          if (formDataObject["body"] == "" || formDataObject["body"] == null) {
+            alert("empty body");
+          }
+
+          let favoritesPosts =
+            JSON.parse(localStorage.getItem("postCollection")) || [];
+
+          let filter = favoritesPosts.filter((p) => {
+            return p.id == formDataObject.id;
+          });
+
+          if (filter.length) return;
+
+          favoritesPosts.push(formDataObject);
+
+          // localStorage.setItem('username', 'John'); key value pair
+          localStorage.setItem(
+            "postCollection",
+            JSON.stringify(favoritesPosts)
+          );
+        });
+      </script>
+    </main>
+  </body>
+</html>

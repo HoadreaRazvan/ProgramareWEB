@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- js
+        limbaj de programare 
+        e un limbaj interpretat
+
+        nu are tipuri de date
+        IN JS 99% SUNT OBIECTE
+        
+        let a= 3;// object cu type number
+        let b ="sasa"; // object cu type string
+
+        ca sa scriem js
+        1) folosim tagul script
+        <script></script>
+        2) scriem intrun fisier .js si includem fisieru cu tagu script
+        <script src="./index.js"></script>
+-->
+  </head>
+  <body>
+    <p id="p1" onclick="changeColor(event)">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+      molestias, velit assumenda aspernatur repudiandae veniam harum, expedita
+      deserunt omnis ut iure aliquid perspiciatis ratione commodi eligendi
+      voluptate dolore vero eius!
+    </p>
+    <button onclick="changeText(event)">Change Text</button>
+    <!-- presupunem ca h1 nu accepta evenimente -->
+    <h1 id="h1ceva">Text</h1>
+    <script>
+      let h1 = document.getElementById("h1ceva");
+      h1.addEventListener("click", function (event) {});
+      h1.addEventListener("dblclick", changeText);
+      h1.onmouseover = function (event) {
+        console.log(event);
+        let h1 = document.getElementById("h1ceva");
+        h1.style.color = "blue";
+      };
+      // browserul ne da la dispozitie
+      // window -- fereastra curenta
+      // document -- PAGINA NOASSTRA HTML
+      // console -- consola pt programmer
+
+      // DOM MANIPULATION API
+      // DOM = DOCUMENT OBJECT MODEL
+
+      //   let a = 2;
+
+      function changeColor(event) {
+        let pTag = document.getElementById("p1");
+        pTag.style.color = "red";
+      }
+      function changeText(event) {
+        console.log(event);
+        // let pTags = document.getElementsByTagName("p");
+        let pTag = document.getElementById("p1");
+        // let pTag2 = document.querySelector("#p1");
+        // console.log(pTag2);
+        pTag.innerText = "ceva"; // doar stringuri
+        // pTag.innerHTML = "ceva<div>a</div>"; // ne lasa sa scriem html
+      }
+    </script>
+
+    <!-- <script src="./scripts/index.js"></script> -->
+  </body>
+</html>

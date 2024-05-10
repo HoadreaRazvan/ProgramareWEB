@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 
+        CSS 
+        CASCADING STYLE SHEET
+        HTML -> DEFINESTE LAYOUT -- CE CONTINE PAGINA
+        CSS -> DEFINESTE STILU -- CUM ARATA PAGINA 
+
+
+        orice tag are niste props standard
+
+        dimensiune (WxH) width, height
+        border
+        margin, padding
+        FORMEAZA BOX MODELUL
+
+        sunt si alte propietati care dicteaza cum sa se comporte:
+            color, background, font-size, font-type
+
+
+        cum se scrie css
+
+        selector1{
+            propietate1: valoare;
+            propietate2: valoare;
+        }
+        selector2{
+            propietate1: valoare;
+            propietate2: valoare;
+        }
+
+        unde se scrie codu css
+        avem 3 optiuni
+
+        EXTERNAL -> IN ALT FISIER
+        se include cu TAGUL link
+        <link rel="stylesheet"  href="style.css">
+        NU ARE CE SA CAUTE IN BODY
+
+        INTERNAL -> IN HEAD IN ACELASI FISIER
+        SE FOLOSESTE TAGUL DE STYLE
+        MUSAI IN HEAD
+        NU ARE CE SA CAUTE IN BODY
+        <style>
+
+            /* selector{
+                prop1:valoare;
+            } */
+        </style>
+
+        INLINE   ->  sse scrie in interiorul tagului
+            folosind atributu style
+            ASA NU
+            <img width="200px" src="" alt="">
+
+            ASA DA
+            <img src="" alt="" style="  prop1:valoare;">
+
+    -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      p {
+        color: blue !important;
+      }
+    </style>
+
+    <style>
+      p {
+        color: green !important;
+      }
+
+      .button {
+        background-color: #27ae60;
+        transition: background-color 0.5s ease;
+      }
+      .button:hover {
+        background-color: #ffd651;
+      }
+
+      /* keyframes nume_animatie */
+      @keyframes slide {
+        0% {
+          margin-left: 0;
+          margin-top: 0;
+        }
+        20% {
+          margin-top: 150px;
+        }
+        40% {
+          margin-top: 0px;
+        }
+        60% {
+          margin-top: 150px;
+        }
+        80% {
+          margin-top: 0px;
+        }
+        100% {
+          margin-left: 100%;
+          margin-top: 100px;
+        }
+      }
+
+      .slide2 {
+        animation: slide 10s ease-in-out infinite alternate;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="slide2">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, hic.
+    </p>
+    <button class="button">click me</button>
+    <!-- div = division
+        asta un block 100% latime
+        span e fraiso care ocupa 0% latime 
+        a
+     -->
+    <button>A</button>
+    <a href="https://www.google.com/">A</a>
+    <a href="https://www.youtube.com/">B</a>
+    <p>Lorem, ipsum dolor.</p>
+    <p>Lorem, ipsum dolor.</p>
+    <p>Lorem, ipsum dolor.</p>
+    <p>Lorem, ipsum dolor.</p>
+    <p>Lorem, ipsum dolor.</p>
+    <div>
+      <h1></h1>
+      <p></p>
+      <section>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+      </section>
+      <p></p>
+      <p></p>
+    </div>
+    <div>
+      <h1></h1>
+      <p></p>
+      <div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+    <div>
+      <h1></h1>
+      <p></p>
+      <div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+    <div>
+      <h1></h1>
+      <p></p>
+      <div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+    <div>
+      <h1></h1>
+      <p></p>
+      <div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+    <div>
+      <h1></h1>
+      <p></p>
+      <div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+    <div>
+      <h1></h1>
+      <p></p>
+      <div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+    <div>
+      <h1></h1>
+      <p></p>
+      <div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+    <div>
+      <h1></h1>
+      <p></p>
+      <div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+    <div>
+      <h1></h1>
+      <p></p>
+      <div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+
+    <img src="img1.png" alt="O pisica" />
+    <img src="img2.png" alt="Un copac" />
+    <div>test</div>
+    <h1 class="text-red font-xl">Ceva</h1>
+    <p class="text-red font-xl">Lorem ipsum dolor sit amet.</p>
+    <p class="text-red">Lorem ipsum dolor sit amet.</p>
+    <p class="text-red">Lorem ipsum dolor sit amet.</p>
+    <p class="">Lorem ipsum dolor sit amet.</p>
+    <p id="text-green">Lorem ipsum dolor sit amet.</p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus,
+      qui?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, maiores
+      quaerat. Minima ex maxime ducimus blanditiis reprehenderit quasi eius
+      laudantium, numquam quidem aliquam? Officiis corporis consequuntur
+      pariatur provident amet, impedit tempora. Nemo asperiores nihil sit,
+      soluta eius laudantium magni, similique, magnam delectus mollitia est
+      deserunt ipsa odit architecto iusto? Enim quasi ipsam saepe consequuntur
+      maiores blanditiis aut magni dicta, veniam sequi aperiam harum eligendi
+      distinctio voluptatibus iusto, expedita voluptate perspiciatis dolorum
+      architecto, obcaecati sunt ipsa! Alias porro nihil reprehenderit quidem
+      consequatur tenetur velit, aliquid nulla ex iure tempora suscipit, id
+      exercitationem rerum corrupti veniam dignissimos voluptate. Distinctio
+      ratione rerum molestias.
+    </p>
+  </body>
+</html>

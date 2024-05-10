@@ -1,0 +1,104 @@
+    /* selector2 {
+        propietate1: valoare;
+        propietate2: valoare;
+    } */
+
+    /* 
+    selectorii de baza
+    taguri, clase, iduri
+    
+    class, id sunt niste atribute 
+    care ne permit sa identificam usor anumite taguri
+
+    clasele se folosesc ca sa grupam mai multe taguri sub aceleasi propietati
+
+    iduri se folosesc ca sa gasim un singur tag
+
+    clasele se identifica cu .
+    iduruile cu #
+     */
+    /* 
+    p {
+        font-size: 22px;
+    }
+
+    .text-red {
+        color: red;
+        background-color: ;
+        margin: 10px;
+        padding: 20px;
+        border: 1px solid salmon;
+    }
+
+    .font-xl {
+        font-size: 28px;
+    }
+
+    #text-green {
+        color: green;
+    } */
+
+    /* selectori avansati */
+    /* 
+    img[alt="O pisica"] {
+        width: 1000px;
+    } */
+
+    /* selectori dependenti de context */
+
+    /* div p {}
+
+    div>p {}
+
+    div>section>p {}
+
+    p.text-red {}
+
+    p#text-red {}
+
+    div>p+h1 {}
+
+    div,
+    div>h1 {} */
+
+    /* p~h1 {} */
+
+    /*  + care frati
+    > care ia copi
+    " " care ia nepoti/stranepoti/copii
+    ,  care ne lasa sa punem mai multi selectori
+    ~,
+*/
+
+    /* pseudo selectori de evenimente */
+    /* 
+    button:hover {
+        font-size: 20px;
+    } */
+
+    /* 
+    discuss about animation using hover
+*/
+
+
+    /*  pseudo selector  la nivel de layout */
+
+    /* div:first-of-type>div:first-child {} */
+    /* div:nth-child(4n+1-2n+7){
+
+    } */
+    /* 
+
+    p::before,
+    p::after {
+        content: "Lorem, ipsum dolor.Lorem, ipsum dolor.Lorem, ipsum dolor.Lorem, ipsum dolor.Lorem, ipsum dolor.";
+    } */
+
+    /* selecteazaa totot */
+    /* * {
+        opacity: 0;
+    } */
+
+    p {
+        color: red !important;
+    }
