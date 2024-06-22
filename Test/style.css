@@ -1,0 +1,8 @@
+/* Stil pentru paragrafe care sunt descendente ale div-urilor */
+li + ul {
+    background-color: red;
+    color: blue;
+    margin-left: 110px;
+    padding-left: 200px
+}
+  
